@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+  <!-- Begin page content -->
+
+  <main class="flex-shrink-0">
+
+    <!-- Header/Navbar Start -->
+    <header id="home_page_header">
+    {% include 'flashNews.html' %}
+    {% include "navbar.html" %}
+  
+      <!-- Navbar attached Under Hero Section Start -->
+  
+      <div class="container" id="header_hero_section">
+        <section class="home">
+          <div class="row">
+            <div class="home-text">
+              <p class="animate-text">
+                {% for title in titles%}
+                <span>{{title.name}}</span>
+                {% endfor %}
+              <h1 class="bottom_up_fixed_title">made right way.</h1>
+              </p>
+            </div>
+          </div>
+        </section>
+  
+        <section class="container p-0">
+          <div class="overflow-hidden p-0 mt-5">
+            <div class="row gy-5 p-0">
+              <div class="col-12 col-md-7 col-lg-7">
+                <div class="border-top">
+                  <h5 class="hero_subtitle">{{settings.description}}</h5>
+                </div>
+              </div>
+              <div class="col-12 col-md-5 col-lg-5">
+                <div class="border-top ">
+                  <a href="">Learn more about OS IT <i class="fa-solid fa-arrow-right-long"
+                      style="color: #34aae2; margin-left: 30px; margin-top: 50px;"></i></a> <br>
+                  <a href="">Explore our services <i class="fa-solid fa-arrow-right-long"
+                      style="color: #34aae2; margin-left: 30px;"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+      </div>
+    </header>
+   
+
+    <!-- Header/Navbar End -->
+
+    <!-- ======================== Body main part start ==================== -->
+
+    <!--  -->
+
+    <section>
+      <div class="container mt-lg-5 mt-3 pb-lg-5 pb-3">
+        <h3 class="text-secondary mb-lg-5 mb-3">Key Services</h3>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gy-5">
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/coding.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="Software-Development-and-Custom-Solutions.html">
+                  <h5 class="card-title pt-3 pb-3">Software Development and Custom Solutions</h5>
+                </a>
+                <p class="card-text">Pioneering software development crafting bespoke solutions that captivate and
+                  innovate.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/cloud-computing.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="cloud-computing.html">
+                  <h5 class="card-title pt-3 pb-3">Cloud Computing</h5>
+                </a>
+                <p class="card-text">Cloud computing revolutionizes data accessibility, fostering innovation and public
+                  engagement globally.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/cyber-crime.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="cybersecurity-solutions.html">
+                  <h5 class="card-title pt-3 pb-3">Cybersecurity Solutions</h5>
+                </a>
+                <p class="card-text">Innovative cybersecurity solutions fortify digital landscapes, ensuring robust
+                  protection and trust.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/ai-brain.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="artificial-intelligence-and-machine-learning.html">
+                  <h5 class="card-title pt-3 pb-3">Artificial Intelligence and Machine Learning</h5>
+                </a>
+                <p class="card-text">Leverage AI capabilities to drive meaningful business outcomes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/iot.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="internet-of-things-(IoT).html">
+                  <h5 class="card-title pt-3 pb-3">Internet of Things (IoT)</h5>
+                </a>
+                <p class="card-text">The Internet of Things (IoT) revolutionizes connectivity, enabling smart,
+                  futuristic living.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0">
+              <img src="asset/images/icons/analysis.png" class="services-card-icon" alt="...">
+              <div class="card-body p-1">
+                <a class="service-card-title" href="big-data-and-analytics.html">
+                  <h5 class="card-title pt-3 pb-3">Big Data and Analytics</h5>
+                </a>
+                <p class="card-text">Revolutionizing connectivity, IoT seamlessly integrates smart devices for public
+                  innovation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Take Free Consultency Section Start -->
+
+    <section class="bg-light pt-3 pt-lg-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-8">
+            <h1 class="fw-light">
+              Unsure where to start? Whether you're cultivating a new concept or enhancing an existing
+              innovation, we're here to support you.
+            </h1> <br> <br>
+
+            <a class="free-consultancy-button" href="contact.html">Take a Free Consultancy <i
+                class=" ps-3 fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Take Free Consultency Section End -->
+
+    <!-- ======================== Body main part End ==================== -->
+
+  </main>
+
+
+
+{% include 'footer.html' %}
+
+{% endblock content %}
+
+ 
