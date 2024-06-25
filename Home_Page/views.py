@@ -11,3 +11,11 @@ class HomeView(TemplateView):
         context['titles'] = Title.objects.all()
         context['img'] = Image.objects.last()
         return context
+class WorkView(TemplateView):
+    template_name = "work.html"
+class ProductView(TemplateView):
+    template_name = "products.html"
+class ServiceView(TemplateView):
+    template_name = "services.html"
+class InsightsView(TemplateView):
+    template_name = "insights.html"
