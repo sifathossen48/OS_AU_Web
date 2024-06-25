@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light p-0" style="z-index: 100;">
     <div class="container navbar-top-position">
-      <span class=""><a href="index.html"><img id="web_logo" src="{{settings.logo.url}}" alt=""></a></span>
+      <span class=""><a href="{% url 'home' %}"><img id="web_logo" src="{{settings.logo.url}}" alt=""></a></span>
       <button class="navbar-toggler mt-0" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -95,7 +95,7 @@
             <a class="nav-link active" href="products.html">Products</a>
           </li>
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="about.html">About</a>
+            <a class="nav-link active" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item nav-option">
             <a class="nav-link active" href="careers.html">Careers</a>
@@ -104,7 +104,7 @@
             <a class="nav-link active" href="insights.html">Insights</a>
           </li>
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="contact.html">Get in touch</a>
+            <a class="nav-link active" href="{% url 'contact' %}">Get in touch</a>
           </li>
         </ul>
       </div>

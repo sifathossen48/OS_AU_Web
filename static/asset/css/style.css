@@ -35,14 +35,14 @@ li {
     padding-top: 10px;
 }
 
-#home_page_header {
+/* #home_page_header {
     background: rgba(0, 0, 0, 0.550) url(../images/home_page_image/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     max-width: 100%;
     background-blend-mode: darken;
-}
+} */
 
 /* =====Nav Bar Start====== */
 .nav-option {

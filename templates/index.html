@@ -8,7 +8,7 @@
   <main class="flex-shrink-0">
 
     <!-- Header/Navbar Start -->
-    <header id="home_page_header">
+    <header id="home_page_header" style="background: rgba(0, 0, 0, 0.550) url({{img.background.url}}); background-repeat: no-repeat; background-size: cover; background-position: center center; max-width: 100%; background-blend-mode: darken;">
     {% include 'flashNews.html' %}
     {% include "navbar.html" %}
   
@@ -140,21 +140,7 @@
 
     <!-- Take Free Consultency Section Start -->
 
-    <section class="bg-light pt-3 pt-lg-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-8 col-lg-8">
-            <h1 class="fw-light">
-              Unsure where to start? Whether you're cultivating a new concept or enhancing an existing
-              innovation, we're here to support you.
-            </h1> <br> <br>
-
-            <a class="free-consultancy-button" href="contact.html">Take a Free Consultancy <i
-                class=" ps-3 fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'free-consultency.html' %}
 
     <!-- Take Free Consultency Section End -->
 
