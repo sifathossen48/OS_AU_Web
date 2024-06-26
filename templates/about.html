@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %} {{abouts.page_Title}} - {{settings.site_Name}} {% endblock title %}
 {% block content %}
 
 
@@ -9,7 +10,7 @@
 
         <!-- Header/Navbar Start -->
 
-        <header id="about-page-header">
+        <header id="about-page-header" style="  background: rgba(51, 51, 51, 0.1) url({{backgrounds.about_Page_Banner.url}}); background-color: #ffffffff;background-repeat: no-repeat; background-size: cover; background-position: center center;max-width: 100%;">
          {% include 'navbar-2.html' %}
 
             <section class="container mt-3 mt-lg-5">
@@ -56,19 +57,69 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-6">
                     <div class="accordion">
-                        {% for value in values %}
                         <div class="accordion-item border-0">
                             <button id="accordion-button-1" aria-expanded="false">
-                                <span class="accordion-title">{{value.title}}</span>
+                                <span class="accordion-title">Innovation-Driven Excellence</span>
                                 <span class="icon" aria-hidden="true"></span>
                             </button>
                             <div class="accordion-content">
                                 <p>
-                                   {{value.content}}
+                                    We prioritize innovation, leveraging cutting-edge technology and creative solutions
+                                    to stay ahead in the industry and deliver exceptional results for our clients.
                                 </p>
                             </div>
                         </div>
-                        {% endfor %}
+                        <div class="accordion-item border-0">
+                            <button id="accordion-button-2" aria-expanded="false">
+                                <span class="accordion-title">Client-Centric Collaboration</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    Our clients are at the heart of everything we do. We build strong, collaborative
+                                    partnerships to understand their unique needs and tailor our solutions to drive
+                                    their success.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <button id="accordion-button-3" aria-expanded="false">
+                                <span class="accordion-title">Technical Mastery</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    We are committed to maintaining the highest standards of technical proficiency,
+                                    ensuring our solutions are robust, reliable, and on the leading edge of
+                                    technological advancements.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <button id="accordion-button-4" aria-expanded="false">
+                                <span class="accordion-title">Integrity and Transparency</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    We uphold the highest ethical standards, fostering trust and transparency in our
+                                    interactions with clients, partners, and team members.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                            <button id="accordion-button-5" aria-expanded="false">
+                                <span class="accordion-title">Continuous Improvement</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </button>
+                            <div class="accordion-content">
+                                <p>
+                                    We embrace a culture of continuous learning and improvement, constantly refining our
+                                    skills, processes, and technologies to deliver superior value and remain at the
+                                    forefront of the industry.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

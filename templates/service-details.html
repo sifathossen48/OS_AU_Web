@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %} {{service.title}} - {{settings.site_Name}} {% endblock title %}
 {% block content %}
 
-
     <!-- Begin page content -->
-
     <main class="flex-shrink-0">
-
+        
         <!-- Header/Navbar Start -->
 
         <header id="software_dev_page_header" style="    background: rgba(0, 0, 0, 0.550) url({{service.banner.url}}); background-repeat: no-repeat; background-size: cover; background-position: center center; max-width: 100%; background-blend-mode: darken;">

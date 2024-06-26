@@ -10,6 +10,7 @@ class Page_Settings(models.Model):
     def __str__(self):
         return self.page_Title
 class Core_Values(models.Model):
+    SI_No = models.IntegerField()
     title = models.CharField(max_length=30)
     content = models.TextField()
     def __str__(self):

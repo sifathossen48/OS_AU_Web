@@ -506,14 +506,14 @@ li {
 
 /* About Page Start */
 
-#about-page-header {
+/* #about-page-header {
     background: rgba(51, 51, 51, 0.1) url(../images/bg.svg);
     background-color: #ffffffff;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     max-width: 100%;
-}
+} */
 
 .about-master-title {
     font-size: 50px;

@@ -22,7 +22,7 @@ class Setting(models.Model):
         return self.site_Name
 class Background(models.Model):
     name = models.CharField(max_length=30)
-    about_Page_Banner = models.ImageField(upload_to='background/')
+    about_Page_Banner = models.FileField(upload_to='background/')
     error_Image = models.ImageField(upload_to='image/')
     def __str__(self):
         return self.name
