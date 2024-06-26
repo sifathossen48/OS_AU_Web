@@ -12,7 +12,7 @@
           <!-- mega menu -->
 
           <li class="nav-item dropdown nav-option has-megamenu">
-            <a class="nav-link active about" href="services.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle=""
+            <a class="nav-link active about" href="{% url 'service' %}" id="navbarDropdownMenuLink" role="button" data-bs-toggle=""
               aria-expanded="false">
               Servcies <span><i class="fa-solid fa-circle-chevron-down dropdown_icon1 ps-1"></i></span></a>
 
@@ -24,7 +24,7 @@
                 <div class="col-12 col-md-12 col-lg-5 ">
                   <h5 class="dropdown_service_title">We provide customized software solutions in every sector.</h5>
                   <br>
-                  <p><a class="consultancy-button" href="contact.html">Take a Free Consultancy <i
+                  <p><a class="consultancy-button" href="{% url 'contact' %}">Take a Free Consultancy <i
                         class="fa-solid fa-arrow-right-long ps-3"></i></a></p>
                 </div>
                 <div class="col-12 col-md-12 col-lg-7">
@@ -89,19 +89,19 @@
           <!-- mega end -->
 
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="work.html">Work</a>
+            <a class="nav-link active" href="{% url 'work' %}">Work</a>
           </li>
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="products.html">Products</a>
+            <a class="nav-link active" href="{% url 'product' %}">Products</a>
           </li>
           <li class="nav-item nav-option">
             <a class="nav-link active" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="careers.html">Careers</a>
+            <a class="nav-link active" href="{% url 'career' %}">Careers</a>
           </li>
           <li class="nav-item nav-option">
-            <a class="nav-link active" href="insights.html">Insights</a>
+            <a class="nav-link active" href="{% url 'insights' %}">Insights</a>
           </li>
           <li class="nav-item nav-option">
             <a class="nav-link active" href="{% url 'contact' %}">Get in touch</a>

@@ -417,14 +417,7 @@ li {
 
 /* Software Developent Page Start */
 
-#software_dev_page_header {
-    background: rgba(0, 0, 0, 0.550) url(../images/software_dev_page/software-dev-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    max-width: 100%;
-    background-blend-mode: darken;
-}
+
 
 .page-title h4 {
     margin-top: 20%;

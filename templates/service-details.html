@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Begin page content -->
+
+    <main class="flex-shrink-0">
+
+        <!-- Header/Navbar Start -->
+
+        <header id="software_dev_page_header" style="    background: rgba(0, 0, 0, 0.550) url({{service.banner.url}}); background-repeat: no-repeat; background-size: cover; background-position: center center; max-width: 100%; background-blend-mode: darken;">
+          {% include "flashNews.html" %}
+           {% include "navbar.html" %}
+            
+           <!-- Navbar attached Under Hero Section Start -->
+            <section class="container">
+                <div class="page-title ">
+                    <h4 class="">{{service.title}}</h4>
+                </div>
+            </section>
+
+            <section class="container p-2">
+                <div class="overflow-hidden p-0 mt-5">
+                    <div class="row gy-5 p-0">
+                        <div class="col-12 col-md-7 col-lg-7">
+                            <div class="border-top">
+                                <h5 class="hero_subtitle">{{settings.description}}</h5>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 col-lg-5">
+                            <div class="border-top ">
+                                <a href="">Learn more about OS IT <i class="fa-solid fa-arrow-right-long"
+                                        style="color: #34aae2; margin-left: 30px; margin-top: 50px;"></i></a> <br>
+                                <a href="">Explore our services <i class="fa-solid fa-arrow-right-long"
+                                        style="color: #34aae2; margin-left: 30px;"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <!-- Header/Navbar End -->
+
+        <!-- ======================== Body main part start ==================== -->
+
+        <section class="container mt-3 mt-lg-5 pb-3 pb-lg-5 border-bottom">
+            <div data-aos="fade-up" class="row">
+                <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center">
+                    <h2 class="text-secondary fw-light">What We Serve</h2> <i
+                        class="ps-3 text-secondary fa-solid fa-arrow-right-long"></i>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <h5 class="fw-light">{{service.serve}}</h5>
+                </div>
+            </div>
+        </section>
+        <section class="container mt-3 mt-lg-5 pb-3 pb-lg-5 border-bottom">
+            <div data-aos="fade-up" class="row">
+                <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center">
+                    <h2 class="text-secondary fw-light">Our Services Include</h2> <i
+                        class="ps-3 text-secondary fa-solid fa-arrow-right-long"></i>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <h5 class="fw-light">
+                        {{service.long_Description | safe}}
+                    </h5>
+                </div>
+            </div>
+        </section>
+
+        {% comment %} <section class="container pb-3 pb-lg-5">
+            <div data-aos="fade-up">
+                <h2 class="text-secondary fw-light mt-3 mt-lg-5 mb-3 mb-lg-5">Technology We Use</h2>
+            </div>
+
+            <div class="row p-2">
+                <div data-aos="fade-up" class="col-12 col-md-3 col-lg-3">
+                    <h5 class="fw-light ps-3 pe-3 pb-5">We leverage a diverse range of <b>frameworks and
+                            technologies</b> to develop
+                        high-performing,
+                        scalable, and
+                        secure applications for web, mobile, and cloud platforms. Our expertise in these tools enables
+                        us to
+                        deliver innovative solutions that propel our clients' businesses forward.</h5>
+                </div>
+                <div class="col-12 col-md-9 col-lg-9">
+                    <div class="row row-cols-1 row-cols-md-3 gy-4">
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/python-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Python</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/flutter-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Flutter</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/android-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Flutter</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/js-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">React</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/react-javascript-js-framework-facebook-svgrepo-com.svg"
+                                    class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">React</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/tailwind-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Tailwind</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/dotnet-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">.NET</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/swift-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Swift</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" class="col">
+                            <div class="card h-100 border-0 ps-3 pe-3">
+                                <img src="asset/images/icons/azure-svgrepo-com.svg" class="tech-icon" alt="...">
+                                <div class="card-body p-0">
+                                    <h5 class="card-title pt-4 pb-3">Azure</h5>
+                                    <p class="card-text fw-light">Python's versatility and robust libraries make it
+                                        ideal for
+                                        software development projects, enabling efficient, scalable, and maintainable
+                                        solutions across various applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> {% endcomment %}
+
+        <!-- Take Free Consultency Section Start -->
+        {% include 'free-consultency.html' %}
+
+        <!-- Take Free Consultency Section End -->
+
+        <!-- ======================== Body main part End ==================== -->
+
+    </main>
+   {% include 'footer.html' %}
+{% endblock content %}

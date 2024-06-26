@@ -63,77 +63,19 @@
         <h3 class="text-secondary mb-lg-5 mb-3">Key Services</h3>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gy-5">
+          {% for service in services %}
           <div class="col">
             <div class="card h-100 border-0">
-              <img src="asset/images/icons/coding.png" class="services-card-icon" alt="...">
+              <img src="{{service.icon.url}}" class="services-card-icon" alt="...">
               <div class="card-body p-1">
-                <a class="service-card-title" href="Software-Development-and-Custom-Solutions.html">
-                  <h5 class="card-title pt-3 pb-3">Software Development and Custom Solutions</h5>
+                <a class="service-card-title" href="{% url 'service-details' service.id %}">
+                  <h5 class="card-title pt-3 pb-3">{{service.title}}</h5>
                 </a>
-                <p class="card-text">Pioneering software development crafting bespoke solutions that captivate and
-                  innovate.</p>
+                <p class="card-text">{{service.description}}</p>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card h-100 border-0">
-              <img src="asset/images/icons/cloud-computing.png" class="services-card-icon" alt="...">
-              <div class="card-body p-1">
-                <a class="service-card-title" href="cloud-computing.html">
-                  <h5 class="card-title pt-3 pb-3">Cloud Computing</h5>
-                </a>
-                <p class="card-text">Cloud computing revolutionizes data accessibility, fostering innovation and public
-                  engagement globally.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 border-0">
-              <img src="asset/images/icons/cyber-crime.png" class="services-card-icon" alt="...">
-              <div class="card-body p-1">
-                <a class="service-card-title" href="cybersecurity-solutions.html">
-                  <h5 class="card-title pt-3 pb-3">Cybersecurity Solutions</h5>
-                </a>
-                <p class="card-text">Innovative cybersecurity solutions fortify digital landscapes, ensuring robust
-                  protection and trust.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 border-0">
-              <img src="asset/images/icons/ai-brain.png" class="services-card-icon" alt="...">
-              <div class="card-body p-1">
-                <a class="service-card-title" href="artificial-intelligence-and-machine-learning.html">
-                  <h5 class="card-title pt-3 pb-3">Artificial Intelligence and Machine Learning</h5>
-                </a>
-                <p class="card-text">Leverage AI capabilities to drive meaningful business outcomes.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 border-0">
-              <img src="asset/images/icons/iot.png" class="services-card-icon" alt="...">
-              <div class="card-body p-1">
-                <a class="service-card-title" href="internet-of-things-(IoT).html">
-                  <h5 class="card-title pt-3 pb-3">Internet of Things (IoT)</h5>
-                </a>
-                <p class="card-text">The Internet of Things (IoT) revolutionizes connectivity, enabling smart,
-                  futuristic living.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 border-0">
-              <img src="asset/images/icons/analysis.png" class="services-card-icon" alt="...">
-              <div class="card-body p-1">
-                <a class="service-card-title" href="big-data-and-analytics.html">
-                  <h5 class="card-title pt-3 pb-3">Big Data and Analytics</h5>
-                </a>
-                <p class="card-text">Revolutionizing connectivity, IoT seamlessly integrates smart devices for public
-                  innovation.</p>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
     </section>
