@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Products - {{settings.site_Name}} {% endblock title %}
+{% block title %} Products -  {{settings.site_Name}}  {% endblock title %}
 {% block content %}
-
 
     <!-- Begin page content -->
 
@@ -10,23 +9,48 @@
 
         <!-- Header/Navbar Start -->
 
-        <header id="about-page-header">
-          {% include "navbar-2.html" %}
+        <header id="about-page-header" style="  background: rgba(51, 51, 51, 0.1) url({{backgrounds.about_Page_Banner.url}}); background-color: #ffffffff;background-repeat: no-repeat; background-size: cover; background-position: center center;max-width: 100%;">
+            {% include 'navbar-2.html' %}
 
             <section class="container mt-4 pb-3">
-
-                <img class="rounded mx-auto d-block" src="{{backgrounds.error_Image.url}}" alt="">
-
+                <br> <br><br>
+                <h1 class="display-1">Products</h1>
+                <br> <br><br>
             </section>
         </header>
 
         <!-- Header/Navbar End -->
 
         <!-- ======================== Body main part start ==================== -->
+        <section>
 
+            <div class="container mt-5 mb-5">
+                <h3 class="text-secondary mb-lg-5 mb-3">Ready Products for Grow your Business</h3>
+                <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 products">
+                    {% for product in products %}
+                    <div class="col">
+                        <div class="p-3 pb-0 rounded">
+                            <i class="fa-solid fa-{{product.icon_name}}"></i>
+                            <p>{{product.title}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                  
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Free Consultency Section Start -->
+
+        {% include 'free-consultency.html' %}
+
+        <!-- Take Free Consultency Section End -->
         <!-- ======================== Body main part End ==================== -->
 
     </main>
 
-    {% include "footer.html" %}
+{% include 'footer.html' %}
+
+
 {% endblock content %}

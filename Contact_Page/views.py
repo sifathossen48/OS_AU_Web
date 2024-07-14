@@ -9,7 +9,7 @@ def contact(request):
         form = forms.ContactForm(data=request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Data submitted successfully') # Redirect to a success page
+            messages.success(request, 'Your messages send successfully') # Redirect to a success page
         else:
             # Print form errors to console for debugging
             print(form.errors)

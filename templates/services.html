@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Services - {{settings.site_Name}} {% endblock title %}
+{% block title %} Services -  {{settings.site_Name}}  {% endblock title %}
 {% block content %}
-
 
     <!-- Begin page content -->
 
@@ -10,21 +9,103 @@
 
         <!-- Header/Navbar Start -->
 
-        <header id="about-page-header">
-            {% include "navbar-2.html" %}
+        <header id="about-page-header" style="  background: rgba(51, 51, 51, 0.1) url({{backgrounds.about_Page_Banner.url}}); background-color: #ffffffff;background-repeat: no-repeat; background-size: cover; background-position: center center;max-width: 100%;">
+            {% include 'navbar-2.html' %}
+
             <section class="container mt-4 pb-3">
 
-                <img class="rounded mx-auto d-block" src="{{backgrounds.error_Image.url}}" alt="">
+                <div class="container mt-4 pb-3">
+                    <h1 class="display-1 mb-3">Services</h1>
+                    <p class="services-description border-bottom pb-5">Our team of experts is dedicated to providing
+                        innovative digital solutions, from AI strategy and design to technical execution and cloud
+                        implementation.</p>
+                </div>
+                <div>
+                    <div class="container mt-lg-5 mt-3 pb-lg-5 pb-3">
+                        <h3 data-aos="fade-up" class="text-secondary mb-lg-5 mb-3">Key Services</h3>
 
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 gy-5">
+                            {% for service in services %}
+                            <div class="col">
+                              <div class="card h-100 border-0">
+                                <img src="{{service.icon.url}}" class="services-card-icon" alt="...">
+                                <div class="card-body p-1">
+                                  <a class="service-card-title" href="{% url 'service-details' service.id %}">
+                                    <h5 class="card-title pt-3 pb-3">{{service.title}}</h5>
+                                  </a>
+                                  <p class="card-text">{{service.description}}</p>
+                                </div>
+                              </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </section>
         </header>
 
         <!-- Header/Navbar End -->
 
+
         <!-- ======================== Body main part start ==================== -->
 
+        <section class="container">
+            <h3 data-aos="fade-up" class="text-secondary mb-lg-5 mb-3">More Services Categories</h3>
+
+            <div class="row">
+                <div data-aos="fade-up" class="col-12 col-md-4">
+                    <h6 class="pb-4">Retail Services </h6>
+                    <ul class="p-0 service-list">
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Point of Sale (POS) Systems</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Inventory Management</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Enterprise Resource Planning (ERP)</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Digital Marketing and Promotion</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> IoT and Smart Retail Solutions</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Software Development (Web & App) and Custom
+                            Solutions</li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" class="col-12 col-md-4">
+                    <h6 class="pb-4">Commercial Services </h6>
+                    <ul class="p-0 service-list">
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Internet of Things (IoT) Solutions</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Human Resources (HR) and Workforce
+                            Management</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Enterprise Resource Planning (ERP)</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> AI strategy and implementation</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Data, analytics and systems integration
+                        </li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Customized software development (Web & App)
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="fade-up" class="col-12 col-md-4">
+                    <h6 class="pb-4">Corportae Services </h6>
+                    <ul class="p-0 service-list">
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Supply Chain and Logistics Management</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Enterprise Resource Planning (ERP)</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Software Development and Integration</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Online Training Management</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Human Resources (HR) and Workforce
+                            Management
+                        </li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i></i> Customized software development (Web & App)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Take Free Consultency Section Start -->
+
+      {% include 'free-consultency.html' %}
+
+        <!-- Take Free Consultency Section End -->
         <!-- ======================== Body main part End ==================== -->
 
     </main>
-{% include "footer.html" %}
-{% endblock content %}
+
+{% include 'footer.html' %}
+
+{% endblock content  %}

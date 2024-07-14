@@ -13,19 +13,133 @@
            {% include "navbar-2.html" %}
 
             <section class="container mt-4 pb-3">
-
-                <img class="rounded mx-auto d-block" src="{{backgrounds.error_Image.url}}" alt="">
-
+                <h1 class="display-1">Insights</h1>
             </section>
         </header>
 
         <!-- Header/Navbar End -->
 
-        <!-- ======================== Body main part start ==================== -->
+        <!-- ======================== Body main part start   ==================== -->
+
+        <!-- Insights Header Start -->
+
+        <section>
+            <div class="container mt-3 mt-lg-5">
+                {% for insight in insights %}
+                  {% if forloop.last %}
+                  <div class="row pt-3 pt-lg-5">
+                    <div class="col-12 col-md-6">
+                     <img class="insights-topic-img" src="{{insight.cover_photo.url}}" alt="">
+                     <a href="{% url 'insights-details' insight.id %}">
+                         <h3 data-aos="fade-up">{{insight.title}}:</h3>
+                     </a>
+                     <p data-aos="fade-up">{{insight.get_short_desc | safe}} […]</p>
+                 </div>
+                  {% endif %}
+                   {% endfor %}
+                   
+                    <div class="col-12 col-md-6">
+                        <form action="{% url 'insight-search' %}" method="GET">
+                            {% csrf_token %}
+                            <div class="search-container">
+                                <input type="text" class="search-input" placeholder="Search..." id="q" name="q">
+                                <button class="search-btn" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </form>
+                        
+                     
+                        <div class="row">
+                            {%for insight in insights%}
+                            <div class="col-12 col-md-7 pt-4">
+                                <a href="">{{insight.category}}</a>
+                                <a href="">
+                                    <h5>{{insight.title}}</h5>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-5 pt-4">
+                                <img class="w-100 p-2"
+                                    src="asset/images/insights/How-Digital-is-Disrupting-the-Customer-Experience.webp"
+                                    alt="">
+                            </div>
+
+                            {% endfor %}
+                        </div>
+
+
+
+                        <div class="row">
+                            {%if category_items%}
+                            {% comment %} {%for category_item in category_items%} {% endcomment %}
+                            <div class="col-12 col-md-7 pt-4">
+                                <a href="">{{category_item.category.name}}</a>
+                                <a href="">
+                                    <h5>{{category_item.category.title}}</h5>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-5 pt-4">
+                                <img class="w-100 p-2"
+                                    src="{{category_item.category.cover_photo.url}}"
+                                    alt="">
+                            </div>
+
+                            {% comment %} {% endfor %} {% endcomment %}
+                            {% endif %}
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Header End -->
+
+        <!-- Future AI Start -->
+
+
+        <section class="future-ai-bg">
+            <div class="row">
+                <div class="col-12 col-md-12 p-0"><img src="{{future_works.cover_photo.url}}" alt=""></div>
+                <div class="col-12 col-md-2 future-ai-content">
+                    <p data-aos="fade-up">The future of work</p>
+                    <a href="">
+                        <h2 class="future-ai-content-title" data-aos="fade-up">{{future_works.title}}</h2>
+                    </a>
+                    <hr data-aos="fade-up">
+                    <p data-aos="fade-up">
+                        {{future_works.desc}}
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future AI End -->
+
+        <section style="margin-top: 150px;">
+            <div class="container">
+                {% for insight in insights %}
+                <div class="row">
+                    <img data-aos="fade-up" class="insights-topic-h-img" src="{{insight.cover_photo.url}}" alt="">
+                    <a href="{% url 'insights-details' insight.id %}">
+                        <h1  data-aos="fade-up" class="insights-title">{{insight.title}}:</h1>
+                    </a>
+                    <p  data-aos="fade-up">{{insight.get_short_desc | safe}}[…]</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Take Free Consultency Section Start -->
+        {% include "free-consultency.html" %}
+        <!-- Take Free Consultency Section End -->
 
         <!-- ======================== Body main part End ==================== -->
 
     </main>
 {% include "footer.html" %}
-
 {% endblock content %}

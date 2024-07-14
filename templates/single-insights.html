@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} {{insight.title}} - Insights - {{settings.site_Name}} {% endblock title %}
+{% block content %}
+
+
+    <!-- Begin page content -->
+
+    <main class="flex-shrink-0">
+
+        <!-- Header/Navbar Start -->
+
+        <header id="about-page-header" style="  background: rgba(51, 51, 51, 0.1) url({{backgrounds.about_Page_Banner.url}}); background-color: #ffffffff;background-repeat: no-repeat; background-size: cover; background-position: center center;max-width: 100%;">
+          {% include 'navbar-2.html' %}
+
+            <section class="container mt-4 pb-3">
+                <h1 class="display-1">{{insight.title}}:</h1>
+            </section>
+        </header>
+
+        <!-- Header/Navbar End -->
+
+        <!-- ======================== Body main part start   ==================== -->
+
+        <section class="pb-5">
+            <img class="single-insights-img" src="{{insight.cover_photo.url}}" alt="">
+
+            <div class="container">
+                <div class="row flex-column-reverse flex-lg-row">
+                    <div class="col-12 col-md-4">
+                        <img class="writer-img" src="{{insight.author_profile.url}}" alt="">
+                        <p>AUTHOR</p>
+                        <h6>{{insight.author}}</h6>
+                        <hr>
+                        <p>CATEGORY</p>
+                        <a href="">{{insight.category}}</a>
+                        <hr>
+                        <p>DATE</p>
+                        <p>{{insight.timestamp}}</p>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        {{insight.desc | safe}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Free Consultency Section Start -->
+       {% include 'free-consultency.html' %}
+
+        <!-- Take Free Consultency Section End -->
+
+        <!-- ======================== Body main part End ==================== -->
+
+    </main>
+
+   {% include 'footer.html' %}
+
+{% endblock content %}
+
+

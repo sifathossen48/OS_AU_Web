@@ -4,6 +4,7 @@ from django.db import models
 class Setting(models.Model):
     site_Name = models.CharField(max_length=30)
     logo = models.FileField(upload_to='logo/')
+    logo_2 = models.FileField(upload_to='logo/')
     favicon = models.FileField(upload_to='favicon/')
     year = models.IntegerField()
     address = models.CharField(max_length=50)
@@ -26,4 +27,3 @@ class Background(models.Model):
     error_Image = models.ImageField(upload_to='image/')
     def __str__(self):
         return self.name
-    
