@@ -39,10 +39,10 @@
                    {% endfor %}
                    
                     <div class="col-12 col-md-6">
-                        <form action="{% url 'insight-search' %}" method="GET">
+                        <form action="{% url 'search_news' %}" method="GET">
                             {% csrf_token %}
                             <div class="search-container">
-                                <input type="text" class="search-input" placeholder="Search..." id="q" name="q">
+                                <input type="search" class="search-input" name="searchQuery" placeholder="Search..." id="q" >
                                 <button class="search-btn" type="submit">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
@@ -51,7 +51,8 @@
                         
                      
                         <div class="row">
-                            {%for insight in insights%}
+                            {% if results %}
+                            {%for insight in results %}
                             <div class="col-12 col-md-7 pt-4">
                                 <a href="">{{insight.category}}</a>
                                 <a href="">
@@ -60,11 +61,12 @@
                             </div>
                             <div class="col-12 col-md-5 pt-4">
                                 <img class="w-100 p-2"
-                                    src="asset/images/insights/How-Digital-is-Disrupting-the-Customer-Experience.webp"
+                                    src="{{insight.cover_photo.url}}"
                                     alt="">
                             </div>
 
                             {% endfor %}
+                            {% endif %}
                         </div>
 
 

@@ -1,10 +1,6 @@
-import django_filters
 
-from Insights_Page.models import Insights
+from django import forms
 
-class InsightsFilter(django_filters.FilterSet):
-    name = django_filters.CharFilter(lookup_expr='iexact')
 
-    class Meta:
-        model = Insights
-        fields = ['category']
+class InsightSearchForm(forms.Form):
+    searchQuery = forms.CharField(max_length=100)
