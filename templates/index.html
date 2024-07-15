@@ -67,7 +67,7 @@
           {% for service in services %}
           <div class="col">
             <div class="card h-100 border-0">
-              <img src="{% static '{{service.icon.url}}' %}" class="services-card-icon" alt="...">
+              <img src="{{service.icon.url}}" class="services-card-icon" alt="...">
               <div class="card-body p-1">
                 <a class="service-card-title" href="{% url 'service-details' service.id %}">
                   <h5 class="card-title pt-3 pb-3">{{service.title}}</h5>
