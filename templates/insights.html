@@ -54,8 +54,8 @@
                             {% if results %}
                             {%for insight in results %}
                             <div class="col-12 col-md-7 pt-4">
-                                <a href="">{{insight.category}}</a>
-                                <a href="">
+                                <a href="{% url 'insights-details' insight.id %}">{{insight.category}}</a>
+                                <a href="{% url 'insights-details' insight.id %}">
                                     <h5>{{insight.title}}</h5>
                                 </a>
                             </div>
@@ -70,25 +70,6 @@
                         </div>
 
 
-
-                        <div class="row">
-                            {%if category_items%}
-                            {% comment %} {%for category_item in category_items%} {% endcomment %}
-                            <div class="col-12 col-md-7 pt-4">
-                                <a href="">{{category_item.category.name}}</a>
-                                <a href="">
-                                    <h5>{{category_item.category.title}}</h5>
-                                </a>
-                            </div>
-                            <div class="col-12 col-md-5 pt-4">
-                                <img class="w-100 p-2"
-                                    src="{{category_item.category.cover_photo.url}}"
-                                    alt="">
-                            </div>
-
-                            {% comment %} {% endfor %} {% endcomment %}
-                            {% endif %}
-                        </div>
 
 
 

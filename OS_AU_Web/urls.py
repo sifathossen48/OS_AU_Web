@@ -9,4 +9,4 @@ urlpatterns = [
     path('about/',include('About_Page.urls')),
     path('insights/',include('Insights_Page.urls')),
     path('contact/',include('Contact_Page.urls')),
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
